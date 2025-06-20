@@ -10,9 +10,9 @@ df.columns = df.columns.str.replace(r'[^\w]', '_', regex=True)  # clean column n
 # Load the trained FLAML model and label encoder
 
 def load_model():
-    with open("../models/best_flamlmodel.pkl", "rb") as f:
+    with open("/models/best_flamlmodel.pkl", "rb") as f:
         model = pickle.load(f)
-    with open("../models/label_encoder.pkl", "rb") as f:
+    with open("/models/label_encoder.pkl", "rb") as f:
         encoder = pickle.load(f)
     return model, encoder
 
